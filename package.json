@@ -1,6 +1,6 @@
 {
   "name": "pi-cache-ext",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pi coding agent extension for caching Ansible repository structure, avoiding re-reads and reducing token usage",
   "type": "module",
   "main": "dist/src/index.js",
@@ -21,12 +21,11 @@
   "scripts": {
     "build": "tsc",
     "test": "node --test dist/tests/**/*.test.js",
-    "pretest": "npm run build",
-    "prepare": "npm run build"
+    "pretest": "npm run build"
   },
   "pi": {
     "extensions": [
-      "./extensions/ansible-cache.ts"
+      "./dist/extensions/ansible-cache.js"
     ]
   },
   "dependencies": {
